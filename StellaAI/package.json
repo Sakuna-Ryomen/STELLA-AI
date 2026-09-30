@@ -1,0 +1,39 @@
+{
+  "name": "stellaai",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k -n \"VITE,ELECTRON\" -c \"blue,magenta\" \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "electron:dev": "concurrently -k -n \"VITE,ELECTRON\" -c \"blue,magenta\" \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "vite:dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@livekit/components-react": "^2.9.24",
+    "@tailwindcss/vite": "^4.3.3",
+    "livekit-client": "^2.22.3",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.5",
+    "electron": "^44.4.5",
+    "eslint": "^10.10.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.6",
+    "globals": "^17.12.0",
+    "vite": "^8.3.0",
+    "wait-on": "^9.5.1"
+  }
+}
